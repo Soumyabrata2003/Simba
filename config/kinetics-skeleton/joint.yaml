@@ -1,0 +1,62 @@
+work_dir: ./work_dir/kinetics-skeleton/Hyperformer_joint_4
+
+
+# feeder
+feeder: feeders.feeder_kinetics.Feeder
+train_feeder_args:
+  # data_path: data/ntu120/NTU120_CSet.npz
+  data_path: /home/mtech/project_env/kinetics-skeleton/train_data_joint.npy
+  label_path: /home/mtech/project_env/kinetics-skeleton/train_label.pkl
+  split: train
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: 64
+  normalization: False
+  random_rot: True
+  p_interval: [0.5, 1]
+  vel: False
+  bone: False
+
+test_feeder_args:
+  # data_path: data/ntu120/NTU120_CSet.npz
+  data_path: /home/mtech/project_env/kinetics-skeleton/val_data_joint.npy
+  label_path: /home/mtech/project_env/kinetics-skeleton/val_label.pkl
+  split: test
+  window_size: 64
+  p_interval: [0.95]
+  vel: False
+  bone: False
+  debug: False
+
+# model
+model: model.Hyperformer.Model
+model_args:
+  num_class: 400
+  num_point: 18
+  num_person: 2
+  # graph: graph.ntu_rgb_d.Graph
+  graph: graph.kinetics.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+  # joint_label: [0, 4, 2, 2, 2, 2, 1, 1, 2, 2, 1, 1, 2, 3, 3, 3, 2, 3, 3, 3, 1, 0, 1, 0, 1]
+  joint_label: [0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 0, 0, 0, 0]
+
+#optim
+# optimizer: AdamW
+weight_decay: 0.0004 #0.2
+base_lr: 0.025 #0.1 #5.e-5 #0.025
+lr_decay_rate: 0.1 #0.1
+step: [35,55]
+warm_up_epoch: 5
+# lr_type: cosine
+
+# training
+device: 0
+weights:
+# resume: /home/mtech/project_env/Hyperformer/work_dir/kinetics-skeleton/Hyperformer_joint/runs-30-110790.pt
+batch_size: 64   #64
+test_batch_size: 64   #512 
+num_epoch: 140
+nesterov: True

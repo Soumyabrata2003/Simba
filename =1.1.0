@@ -1,0 +1,80 @@
+Collecting causal-conv1d
+  Downloading causal_conv1d-1.1.3.post1.tar.gz (6.6 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: torch in /usr/local/lib/python3.10/dist-packages (from causal-conv1d) (2.1.0+cu121)
+Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from causal-conv1d) (23.2)
+Collecting buildtools (from causal-conv1d)
+  Downloading buildtools-1.0.6.tar.gz (446 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.5/446.5 kB 5.0 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting ninja (from causal-conv1d)
+  Downloading ninja-1.11.1.1-py2.py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (307 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 307.2/307.2 kB 6.3 MB/s eta 0:00:00
+Requirement already satisfied: sqlalchemy in /usr/local/lib/python3.10/dist-packages (from buildtools->causal-conv1d) (2.0.27)
+Collecting argparse (from buildtools->causal-conv1d)
+  Downloading argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Collecting twisted (from buildtools->causal-conv1d)
+  Downloading twisted-23.10.0-py3-none-any.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 12.1 MB/s eta 0:00:00
+Collecting simplejson (from buildtools->causal-conv1d)
+  Downloading simplejson-3.19.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (137 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.9/137.9 kB 11.0 MB/s eta 0:00:00
+Collecting furl (from buildtools->causal-conv1d)
+  Downloading furl-2.1.3-py2.py3-none-any.whl (20 kB)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from buildtools->causal-conv1d) (2.31.0)
+Collecting docopt (from buildtools->causal-conv1d)
+  Downloading docopt-0.6.2.tar.gz (25 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: python-dateutil in /usr/local/lib/python3.10/dist-packages (from buildtools->causal-conv1d) (2.8.2)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from buildtools->causal-conv1d) (3.1.3)
+Collecting redo (from buildtools->causal-conv1d)
+  Downloading redo-2.0.4-py2.py3-none-any.whl (12 kB)
+Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from torch->causal-conv1d) (3.13.1)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/dist-packages (from torch->causal-conv1d) (4.10.0)
+Requirement already satisfied: sympy in /usr/local/lib/python3.10/dist-packages (from torch->causal-conv1d) (1.12)
+Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from torch->causal-conv1d) (3.2.1)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.10/dist-packages (from torch->causal-conv1d) (2023.6.0)
+Requirement already satisfied: triton==2.1.0 in /usr/local/lib/python3.10/dist-packages (from torch->causal-conv1d) (2.1.0)
+Requirement already satisfied: six>=1.8.0 in /usr/local/lib/python3.10/dist-packages (from furl->buildtools->causal-conv1d) (1.16.0)
+Collecting orderedmultidict>=1.0.1 (from furl->buildtools->causal-conv1d)
+  Downloading orderedmultidict-1.0.1-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2->buildtools->causal-conv1d) (2.1.5)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->buildtools->causal-conv1d) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->buildtools->causal-conv1d) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->buildtools->causal-conv1d) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->buildtools->causal-conv1d) (2024.2.2)
+Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.10/dist-packages (from sqlalchemy->buildtools->causal-conv1d) (3.0.3)
+Requirement already satisfied: mpmath>=0.19 in /usr/local/lib/python3.10/dist-packages (from sympy->torch->causal-conv1d) (1.3.0)
+Requirement already satisfied: attrs>=21.3.0 in /usr/local/lib/python3.10/dist-packages (from twisted->buildtools->causal-conv1d) (23.2.0)
+Collecting automat>=0.8.0 (from twisted->buildtools->causal-conv1d)
+  Downloading Automat-22.10.0-py2.py3-none-any.whl (26 kB)
+Collecting constantly>=15.1 (from twisted->buildtools->causal-conv1d)
+  Downloading constantly-23.10.4-py3-none-any.whl (13 kB)
+Collecting hyperlink>=17.1.1 (from twisted->buildtools->causal-conv1d)
+  Downloading hyperlink-21.0.0-py2.py3-none-any.whl (74 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.6/74.6 kB 4.4 MB/s eta 0:00:00
+Collecting incremental>=22.10.0 (from twisted->buildtools->causal-conv1d)
+  Downloading incremental-22.10.0-py2.py3-none-any.whl (16 kB)
+Collecting zope-interface>=5 (from twisted->buildtools->causal-conv1d)
+  Downloading zope.interface-6.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.3/247.3 kB 7.0 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from zope-interface>=5->twisted->buildtools->causal-conv1d) (67.7.2)
+Building wheels for collected packages: causal-conv1d, buildtools, docopt
+  Building wheel for causal-conv1d (setup.py): started
+  Building wheel for causal-conv1d (setup.py): finished with status 'done'
+  Created wheel for causal-conv1d: filename=causal_conv1d-1.1.3.post1-cp310-cp310-linux_x86_64.whl size=13747559 sha256=4c6a6d908244c5a2b699847f6622e1300e31317e9c5f724e64068faa1fa0e7e2
+  Stored in directory: /root/.cache/pip/wheels/2f/a0/30/b43f9cf4b5ca677a63a11cda4ebc97667a0dcb4c5ade951a8f
+  Building wheel for buildtools (setup.py): started
+  Building wheel for buildtools (setup.py): finished with status 'done'
+  Created wheel for buildtools: filename=buildtools-1.0.6-py3-none-any.whl size=512343 sha256=ba1164ecfb86ab546d8602cb6bc527e7e290e16c3724cc58406860fd544dfc14
+  Stored in directory: /root/.cache/pip/wheels/90/e9/2a/625d99dffa430d0b4293d3d386f63e0eb8edeeb54f3f29d208
+  Building wheel for docopt (setup.py): started
+  Building wheel for docopt (setup.py): finished with status 'done'
+  Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13706 sha256=29d1a35c08d187fab73d02980652c8e678406ce9181635bb626255c059dbeb1b
+  Stored in directory: /root/.cache/pip/wheels/fc/ab/d4/5da2067ac95b36618c629a5f93f809425700506f72c9732fac
+Successfully built causal-conv1d buildtools docopt
+Installing collected packages: redo, ninja, incremental, docopt, argparse, zope-interface, simplejson, orderedmultidict, hyperlink, constantly, automat, twisted, furl, buildtools, causal-conv1d
+Successfully installed argparse-1.4.0 automat-22.10.0 buildtools-1.0.6 causal-conv1d-1.1.3.post1 constantly-23.10.4 docopt-0.6.2 furl-2.1.3 hyperlink-21.0.0 incremental-22.10.0 ninja-1.11.1.1 orderedmultidict-1.0.1 redo-2.0.4 simplejson-3.19.2 twisted-23.10.0 zope-interface-6.2
