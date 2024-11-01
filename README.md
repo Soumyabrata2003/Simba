@@ -1,23 +1,11 @@
-# Hyperformer
-This is the official implementation of our paper [Hypergraph Transformer for Skeleton-based Action Recognition.](https://arxiv.org/pdf/2211.09590.pdf)
+# Simba
+This is the official implementation of our paper [Simba: Mamba augmented U-ShiftGCN for Skeletal Action Recognition in Videos](https://arxiv.org/abs/2404.07645).
 
-## Excellent Efficiency
-| Model | Parameters | FLOPs | Training Time/Epoch | Accuracy |
-| -------- | ------- | -------- | ------- | -------- |
-| [ST-TR](https://github.com/Chiaraplizz/ST-TR) | 12.1M | 259.4G | 11m48s | 89.9 |
-| [DSTA](https://github.com/lshiwjx/DSTA-Net) | 4.1M | 64.7G |  10m36s | 91.5 | 
-| [Efficient-GCN-B4](https://github.com/yfsong0709/EfficientGCNv1) * | 2.0M | 15.2G* | 15m37s* | 91.7* |
-| Hyperformer | 2.6M | 14.8G | 6m52s | 92.9 |
+## Note
 
-Remark: Comparing computation budget under the same setting
-(1 Tesla V100-32GB, 64 batch size, etc.) on NTU RGB+D 60 Cross-Subject Benchmark. *EfficientNet-B4
-requires 4 times higher temporal resolution (288 vs 64 frames) and
-thus 2 GPUs to fit into memory and reach their reported accuracy.
-
-## Attention on Hypergraph
-<p align="center">
-   <img src="hypergraph_tease_image_new.png" alt="drawing" width="550"/>
-</p>
+- [ ] Make pre-trained models available.
+- [ ] Due to this repo borrowing inspiration from multiple codebases, some files are redundant. Working towards optimizing it !
+- [x] Make code available.
 
 ## Hyperformer architecture
 <p align="center">
@@ -85,10 +73,6 @@ Put downloaded data into the following directory structure:
 
 # Evaluation
 
-We provide the [pretrained model weights](https://github.com/ZhouYuxuanYX/Hyperformer/releases/download/pretrained_weights/hyperformer_pretrained_weights.zip) for NTURGB+D 60 and NTURGB+D 120 benchmarks.
-
-To use the pretrained weights for evaluation, please run the following command:
-
 ```
 bash evaluate.sh
 ```
@@ -117,7 +101,7 @@ bash ensemble.sh
 
 ## Acknowledgements
 
-This repo is based on [2s-AGCN](https://github.com/lshiwjx/2s-AGCN) and [CTR-GCN](https://github.com/Uason-Chen/CTR-GCN). The data processing is borrowed from [SGN](https://github.com/microsoft/SGN) and [HCN](https://github.com/huguyuehuhu/HCN-pytorch), and the training strategy is based on [InfoGCN](https://github.com/stnoah1/infogcn).
+This repo is based on [Hyperformer](https://github.com/ZhouYuxuanYX/Hyperformer), [Mamba](https://github.com/state-spaces/mamba) and [Shift-GCN](https://github.com/kchengiva/Shift-GCN).
 
 Thanks to the original authors for their work!
 
@@ -125,14 +109,14 @@ Thanks to the original authors for their work!
 
 Please cite this work if you find it useful:
 ````BibTeX
- @article{zhou2022hypergraph,
-  title={Hypergraph Transformer for Skeleton-based Action Recognition},
-  author={Zhou, Yuxuan and Cheng, Zhi-Qi and Li, Chao and Geng, Yifeng and Xie, Xuansong and Keuper, Margret},
-  journal={arXiv preprint arXiv:2211.09590},
-  year={2022}
+@article{chaudhuri2024simba,
+  title={Simba: Mamba augmented U-ShiftGCN for Skeletal Action Recognition in Videos},
+  author={Chaudhuri, Soumyabrata and Bhattacharya, Saumik},
+  journal={arXiv preprint arXiv:2404.07645},
+  year={2024}
 }
 ````
 
 # Contact
-For any questions, feel free to contact: `zhouyuxuanyx@gmail.com`
+For any questions, feel free to raise an issue !
 
