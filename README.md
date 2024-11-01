@@ -1,5 +1,5 @@
 # Simba
-This is the official implementation of our paper [Simba: Mamba augmented U-ShiftGCN for Skeletal Action Recognition in Videos](https://arxiv.org/abs/2404.07645).
+This is the official implementation of our paper [Simba: Mamba augmented U-ShiftGCN for Skeletal Action Recognition in Videos](https://arxiv.org/abs/2404.07645). To the best of our knowledge, this is the first skeleton action recognition model based on Mamba augmentation with GCN. 
 
 ## Note
 
@@ -7,9 +7,9 @@ This is the official implementation of our paper [Simba: Mamba augmented U-Shift
 - [ ] Due to this repo borrowing inspiration from multiple codebases, some files are redundant. Working towards optimizing it !
 - [x] Make code available.
 
-## Hyperformer architecture
+## Simba architecture
 <p align="center">
-   <img src="hyperformer.png" alt="drawing" width="800"/>
+   <img src="model_final_3.png" alt="drawing" width="800"/>
 </p>
 
 # Preparation
