@@ -1,4 +1,4 @@
-# Simba
+# Simba <img src="assets/blue_lion.png" alt="Lion Logo" width="40" height="40">
 This is the official implementation of our paper [Simba: Mamba augmented U-ShiftGCN for Skeletal Action Recognition in Videos](https://arxiv.org/abs/2404.07645). To the best of our knowledge, this is the first skeleton action recognition model based on Mamba augmentation with GCN. 
 
 ## Note
