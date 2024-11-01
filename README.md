@@ -4,8 +4,8 @@ This is the official implementation of our paper [Simba: Mamba augmented U-Shift
 ## News
 
 - [ ] Make pre-trained models available.
-- [ ] Due to this repo borrowing inspiration from multiple codebases, some files are redundant. Working towards optimizing it !
-- [x] Make code available.
+- [ ] This repo borrows inspiration from multiple codebases. Therefore, some files are redundant. Working towards cleaning the repo !
+- [x] Make the code available.
 
 ## Simba architecture
 <p align="center">
