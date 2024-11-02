@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 # from mamba_ssm import Mamba
-from mamba_bcks import MambaBlock
+from mamba_blocks import MambaBlock
 from layers import GraphConvolution, Shift_gcn #unit_gcn
 # from ctrgcn import unit_gcn
 from graph.tools import normalize_digraph
