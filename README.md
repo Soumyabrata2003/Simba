@@ -15,6 +15,10 @@ This is the official implementation of our paper [Simba: Mamba augmented U-Shift
 # Preparation
 ### Install torchlight
 Run `pip install -e torchlight`
+### Install dependencies
+```
+pip install -r requirements.txt
+```
 
 ### Download datasets.
 
