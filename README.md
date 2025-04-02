@@ -80,7 +80,7 @@ Put downloaded data into the following directory structure:
 ```
 bash evaluate.sh
 ```
-
+Replace path_to_model_weights argument to the saved model weights you obtain after training.
 # Training & Testing
 
 ### Training
